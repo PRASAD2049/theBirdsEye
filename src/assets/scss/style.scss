@@ -34,7 +34,37 @@
 }
 
 /* Admins styles */
-.admin-content{
+.admin-content {
   background-color: $bg-white;
-  border-radius:1px;
+  border-radius: 1px;
+}
+
+.breadcrumb-primary {
+  background-color: transparent;
+
+  >.breadcrumb-item {
+    &:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background: url('assets/images/right-arrow.svg') no-repeat center center;
+      vertical-align: middle;
+    }
+
+    >a {
+      background: #E7F2FB;
+      padding: 10px 5px;
+      color: #127DD9;
+      font-size: 10px;
+      line-height: 1.5;
+      border: 1px solid #127DD9;
+      border-radius: 3px;
+    }
+
+    &.active {
+      font-size: 14px;
+      line-height: 1.5;
+      color: #FFFFFF;
+    }
+  }
 }
