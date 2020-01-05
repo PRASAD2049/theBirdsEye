@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+.header {
+  padding: 0px 15px;
+  background-color: $header-bg-color;
+
+  .navbar {
+    .navbar-nav {
+      >li {
+        margin: 0 0 0 25px;
+
+        .nav-link {
+          border-radius: 39px;
+          color: $nav-item-color;
+          font-weight: 600;
+          padding: 6px 10px;
+          font-size: 14px;
+          line-height: 1.5;
+        }
+
+        &.active {
+          .nav-link {
+            background-color: $nav-item-active-bg-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/** header secondary */
+.header-secondary {
+  padding: 13px 0;
+  background-color: $header-secodary-bg-color;
+}
+
+/* Admins styles */
+.admin-content{
+  background-color: $bg-white;
+  border-radius:1px;
+}

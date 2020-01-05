@@ -1,0 +1,47 @@
+<div class="header-secondary">
+  <div class="container">
+    <div class="d-flex">
+      <div class="ml-auto">
+        <button type="button" class="btn btn-primary button-primary">
+          <span>
+            <img src="assets/images/add.svg">
+          </span>Add New Admin </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="adimin-list-wrapper py-3">
+  <div class="container">
+    <div class="admin-list row">
+      <ng-container *ngFor="let admin of adminsList">
+        <div class="col-lg-3 py-3">
+          <div class="admin-content p-3 text-center" [routerLink]="['../', 'profile', admin.employeeNumber]">
+            <figure>
+              <img [src]="admin.adminPicUrl" width="60" height="60" alt="admin">
+            </figure>
+            <p class="font-text-primary">{{ admin.adminName }}</p>
+            <hr>
+            <div class="row">
+              <div class="col-lg-6 px-2">
+                <p class="font-text-tertiary mb-0">Phone Number</p>
+                <p class="font-text-secondary font-weight-bold">{{ admin.phoneNumber }}</p>
+              </div>
+              <div class="col-lg-6 px-2">
+                <p class="font-text-tertiary mb-0">Employee Number</p>
+                <p class="font-text-secondary font-weight-bold">{{ admin.employeeNumber }}</p>
+              </div>
+              <div class="col-lg-6 px-2">
+                <p class="font-text-tertiary mb-0">Projects</p>
+                <p class="font-text-secondary font-weight-bold">{{ admin.projects }}</p>
+              </div>
+              <div class="col-lg-6 px-2">
+                <p class="font-text-tertiary mb-0">Admin Privileges</p>
+                <p class="font-text-secondary font-weight-bold">{{ admin.adminPrevilege }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
